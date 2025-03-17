@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8262690330558580149
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skybox
+  m_Shader: {fileID: -6465566751694194690, guid: f555e3bbedf7d5d408aa14078bbceb08, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _HorizonBlend: 15.6
+    - _NadirBlend: 0.3
+    - _StarHeight: 291.6
+    - _StarIntensity: 315.14
+    - _StarPower: 30
+    - _SunSize: 0.1
+    - _ZenithBlend: 0.4
+    m_Colors:
+    - _GroundColor: {r: 0.17254895, g: 0.27843133, b: 0.5764706, a: 0}
+    - _HorizonColor: {r: 0.36078432, g: 0.36078432, b: 0.36078432, a: 0}
+    - _MainLightDirection: {r: 0.34661138, g: 0.9203363, b: 0.18122315, a: 0}
+    - _NightSkyColor: {r: 0.07058821, g: 0.07450979, b: 0.094117604, a: 0}
+    - _SkyColor: {r: 0, g: 0.60715574, b: 0.8490566, a: 0}
+    - _SunColor: {r: 4, g: 3.134895, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
