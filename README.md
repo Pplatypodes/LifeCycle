@@ -3,7 +3,7 @@ Simulation environnement avec des agents virtuels sur Unity en 3D.
 
 # Images
 Le Monde:<br>
-<img src="Screenshots/map_birds_eye_view.png/>
+<img src="Screenshots/map_birds_eye_view.png"/>
 
 <img src="Screenshots/map_side_2.png"/>
 
