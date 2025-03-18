@@ -9,3 +9,5 @@ Le Monde:<br>
 
 <br>Le Jeu:<br>
 <img src="Screenshots/world_night.png"/>
+
+<img src="Screenshots/world_day.png"/>
