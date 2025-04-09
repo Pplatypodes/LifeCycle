@@ -1,6 +1,6 @@
 # Description
-Ekaterina SEDELNIKOVA : reponsable agents<br>
-Cyrielle GEDOR : responsable environnement
+Ekaterina SEDELNIKOVA : responsable environnement<br>
+Cyrielle GEDOR : responsable agents
 
 Simulation environnement avec des agents virtuels sur Unity en 3D.  
 
