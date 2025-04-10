@@ -15,22 +15,23 @@ public class PlayerController : MonoBehaviour {
     private float translation;
     private float straffe;
 
-    // Use this for initialization
+    /* Démarrage : Verrouille le curseur */
     void Start () {
-        // turn off the cursor
+        // Désactive le curseur
         Cursor.lockState = CursorLockMode.Locked;		
 	}
-	
-	// Update is called once per frame
+    
+    /* Update : Gère les déplacements du joueur et le déverrouillage du curseur */
 	void Update () {
-        // Input.GetAxis() is used to get the user's input
-        // You can furthor set it on Unity. (Edit, Project Settings, Input)
+        // Récupère l'entrée utilisateur pour avancer/reculer et strafing
         translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        
+        // Déplace le joueur selon les axes horizontal et vertical
         transform.Translate(straffe, 0, translation);
 
         if (Input.GetKeyDown("escape")) {
-            // turn on the cursor
+            // Réactive le curseur
             Cursor.lockState = CursorLockMode.None;
         }
     }

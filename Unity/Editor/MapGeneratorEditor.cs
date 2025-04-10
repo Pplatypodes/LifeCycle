@@ -1,21 +1,43 @@
 ﻿﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+
 using UnityEditor;
 
-[CustomEditor (typeof (MapGenerator))]
-public class MapGeneratorEditor : Editor {
+[CustomEditor(typeof(WorldGenerator))]
+public class WorldGeneratorEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
 
-	public override void OnInspectorGUI() {
-		MapGenerator mapGen = (MapGenerator)target;
+        WorldGenerator generator = (WorldGenerator)target;
 
-		if (DrawDefaultInspector ()) {
-			if (mapGen.autoUpdate) {
-				mapGen.DrawMapInEditor ();
-			}
-		}
+        if (GUILayout.Button("Generate Map"))
+        {
+            generator.GenerateWorld();
+            EditorUtility.SetDirty(generator);
+        }
 
-		if (GUILayout.Button ("Generate")) {
-			mapGen.DrawMapInEditor ();
-		}
-	}
+        if (GUILayout.Button("Clean Up"))
+        {
+            WorldGeneratorUtility.CleanUp(generator.transform);
+            EditorUtility.SetDirty(generator);
+        }
+
+        if (GUILayout.Button("Display Main Map"))
+        {
+            if (generator.GlobalNoiseMap == null || generator.GlobalColourMap == null)
+            {
+                generator.GenerateWorld();
+            }
+            generator.DisplayMainMap();
+            EditorUtility.SetDirty(generator);
+        }
+
+        if (GUILayout.Button("Clear Preview"))
+        {
+            generator.ClearMainMap();
+            EditorUtility.SetDirty(generator);
+        }
+    }
 }
