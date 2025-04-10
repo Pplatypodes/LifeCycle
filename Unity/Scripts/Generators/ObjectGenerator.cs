@@ -178,6 +178,11 @@ public class ObjectGenerator : MonoBehaviour
     /* Initialise la végétation pour chaque objet stocké s'il possède un composant Vegetation */
     public void InitializeAllVegetation()
     {
+        if (generatorType != "Plant" && generatorType != "Vegetation")
+        {
+            return;
+        }
+    
         List<StoredObject> storedObjects = objectStorage.GetAllObjects(generatorType);
         foreach (StoredObject stored in storedObjects)
         {
@@ -199,6 +204,11 @@ public class ObjectGenerator : MonoBehaviour
     /* Initialise le gazon pour chaque objet stocké s'il possède un composant Grass */
     public void InitializeAllGrass()
     {
+        if (generatorType != "Grass")
+        {
+            return;
+        }
+        
         List<StoredObject> storedObjects = objectStorage.GetAllObjects(generatorType);
         foreach (StoredObject stored in storedObjects)
         {
